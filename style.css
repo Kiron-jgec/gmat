@@ -1,0 +1,17 @@
+.colors
+{
+  color: #FFDC17; 
+  color: #17FF68; 
+  color: #173AFF;
+  color: #FF17AE;
+}
+
+h1 
+{
+   color: #173AFF;
+  font-family: "Heebo";
+  font-size: 35px;
+  margin: 10px 0px;
+  line-height: 30px;
+  font-weight: 600;
+}
