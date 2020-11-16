@@ -1,18 +1,83 @@
 <template>
   <div class="login">
     <div class="fontSection">
-      <div class="imgSec">
-        <img src="../../../assets/web Img/img1.png" alt="" />
+      <div class="imgSec" id="fontImg">
+        <img src="../../../assets/web Img/img1.webp" alt="" />
       </div>
       <div class="textSectin">
         <h1>TAKE THE FIRST STEP</h1>
         <h2>OF YOUR JOURNY TO SUCCESS</h2>
         <div class="buttonSec">
-          <a href=""> <button class="contactNow">Contact Now</button></a>
-          <a href=""> <button class="Joinnow">Join Now</button></a>
+         
+            <router-link
+          tag="a"
+          :to="{ name: 'contact' }"
+          active-class="active"
+          exact
+        >
+          <button class="contactNow">Contact Now</button>
+        </router-link>
+
+         <router-link
+          tag="a"
+          :to="{ name: 'materials' }"
+          active-class="active"
+          exact
+        >
+          <button class="Joinnow">Join Now</button>
+        </router-link>
+
+          <a href="#"> </a>
         </div>
       </div>
     </div>
+
+
+<!-- mobile landing Page -->
+
+<div class="mobileHeadSec">
+
+<div class="fontImg">
+
+</div>
+<div class="mtexatandbtn">
+  <div class="mhContainer">
+  <h1>TAKE THE FIRST STEP</h1>
+        <h2>OF YOUR JOURNY TO SUCCESS</h2>
+   <router-link
+          tag="a"
+          :to="{ name: 'contact' }"
+          active-class="active"
+          exact
+        >
+          <button class="contactNow">Contact Now</button>
+        </router-link>
+
+
+               <router-link
+          tag="a"
+          :to="{ name: 'materials' }"
+          active-class="active"
+          exact
+        >
+          <button class="Joinnow">Join Now</button>
+        </router-link>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section>
@@ -79,7 +144,7 @@ With us, everything is about you, whether it’s how you learn or providing you 
   <div class="compare">
 
     <div class="imgSec">
-        <img src="../../../assets/web Img/img2.png" alt="" />
+        <img src="../../../assets/web Img/img2.webp" alt="" />
       </div>
       <div class="textSectin2">
         <h1>How We Compare to Other GMAT Prep Options</h1>
@@ -98,34 +163,34 @@ With us, everything is about you, whether it’s how you learn or providing you 
 <div class="logoContainer">
 
 <div class="sloglogo">
-  <a href="https://www.brown.edu/"><img src="../../../assets/web Img/c1.png" alt=""></a>
+  <a href="https://www.brown.edu/"><img src="../../../assets/web Img/c1.webp" alt=""></a>
 </div>
 <div class="sloglogo2">
-<a href="https://www.columbia.com/"> <img src="../../../assets/web Img/c2.png" alt=""></a> 
+<a href="https://www.columbia.com/"> <img src="../../../assets/web Img/c2.webp" alt=""></a> 
 
 </div>
 <div class="sloglogo3">
-<a href="https://www.cornell.edu/">  <img src="../../../assets/web Img/c3.png" alt=""></a>
+<a href="https://www.cornell.edu/">  <img src="../../../assets/web Img/c3.webp" alt=""></a>
 
 </div>
 <div class="sloglogo4">
- <a href="https://home.dartmouth.edu/"> <img src="../../../assets/web Img/c4.png" alt=""></a>
+ <a href="https://home.dartmouth.edu/"> <img src="../../../assets/web Img/c4.webp" alt=""></a>
 
 </div>
 <div class="sloglogo5">
- <a href="https://www.harvard.edu/"><img src="../../../assets/web Img/c5.png" alt=""></a> 
+ <a href="https://www.harvard.edu/"><img src="../../../assets/web Img/c5.webp" alt=""></a> 
 
 </div>
 <div class="sloglogo6">
- <a href="https://www.upenn.edu/"> <img src="../../../assets/web Img/c6.png" alt=""></a>
+ <a href="https://www.upenn.edu/"> <img src="../../../assets/web Img/c6.webp" alt=""></a>
 
 </div>
 <div class="sloglogo7">
- <a href="https://www.yale.edu/"> <img src="../../../assets/web Img/c7.png" alt=""></a>
+ <a href="https://www.yale.edu/"> <img src="../../../assets/web Img/c7.webp" alt=""></a>
 
 </div>
 <div class="sloglogo8">
- <a href="https://www.upenn.edu/"> <img src="../../../assets/web Img/c8.png" alt=""></a>
+ <a href="https://www.upenn.edu/"> <img src="../../../assets/web Img/c8.webp" alt=""></a>
 
 </div>
 
@@ -169,6 +234,13 @@ If you have any questions or are ready to get started, give us a call
     <p>
 I cant believe that I have got 760. I couldn't have done it without your help.Thanks you so much! Going to miss tutoring those equations were finally getting fun for me haha. 48 quant 49 verbal 8 IR</p>
 <h5>Allisin Bart</h5> <small> &nbsp;&nbsp;- Student</small>
+<br>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+
   </div>
   </li>
   
@@ -178,6 +250,12 @@ I cant believe that I have got 760. I couldn't have done it without your help.Th
        <h4>" Im In Shock i scored 740! "</h4>
     <p>“Bob, I scored 740 on the GMAT. I am in shock. Thank you so much for all your help!”</p>
     <h5>Morgan Mckee</h5><small>&nbsp;&nbsp; - Student</small>
+    <br>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
   </div>
   </li>
     <li>
@@ -186,6 +264,12 @@ I cant believe that I have got 760. I couldn't have done it without your help.Th
     <p>
 “I tried other tutors before i came to Bob. I have found the right tutor for GMAT. He is the man for GMAT Quantitative help. He explains shortouts and tips that are easily executable in GMAT.”</p>
 <h5>Jack Eidman</h5><small>&nbsp;&nbsp; - Student</small>
+<br>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
   </div>
   </li>
     <li>
@@ -194,6 +278,12 @@ I cant believe that I have got 760. I couldn't have done it without your help.Th
     <p>
 I have some great news. I got accepted into Columbia. Thank you so much for all your help in preparing me for GMAT. Without your help, there was no way I could get the scores necessary to get into Columbia.</p>
 <h5>Eli S.</h5><small> &nbsp;&nbsp; -Student</small>
+<br>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
   </div>
   </li>
   
@@ -215,6 +305,12 @@ I have some great news. I got accepted into Columbia. Thank you so much for all 
   <br>
   <h5>{{testimoni.name}}</h5>
   <small>&nbsp;&nbsp;&nbsp;-  {{testimoni.role}}</small>
+<br>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <i class="fa fa-star" aria-hidden="true"></i>
 </div>
 
 
@@ -318,8 +414,11 @@ videosec:[
 <style scoped>
 section
 {
-  margin: 15% 0px;
+  margin: 10% 0px;
+ 
 }
+/* mobile landing page  */
+
 
 .fontSection,.compare,.cntact {
   display: grid;
@@ -412,11 +511,11 @@ section
   padding: 30px;
   background: lightcoral;
   text-align: center;
-   background: #111637;
+  background: aliceblue;
 }
 .gamtFormat h1
 {
-  color: #FFDC17; 
+    color: #2991f3; 
 
 }
 .gamtFormat p
@@ -464,7 +563,7 @@ background: rgb(246,246,246);
 }
 .whyNyc h3 
 {
-  color: #01812e; 
+  color: #2991f3; 
    font-family: "Heebo", sans-serif;
 
 }
@@ -562,7 +661,12 @@ padding: 20px;
 	padding: 20px;
 	margin-top: 10px;
 	position: relative;
-	width: 600px;
+	width: 550px;
+  z-index: -1;
+}
+#slider i 
+{
+  color: rgb(255, 153, 0);
 }
 
 #slider li
@@ -578,7 +682,7 @@ padding: 20px;
 {
   font-size: 22px;
    font-family: "Heebo", sans-serif;
-   color: #e24203;
+   color: #2991f3;
    font-weight: 600;
 }
 #slider li h5,.testimontalcontent h5
@@ -601,6 +705,11 @@ padding: 20px;
    font-family: "Heebo", sans-serif;
  font-size: 20px;
  color: rgb(126, 126, 126);
+
+}
+.testimontalcontent i 
+{
+  color: rgb(255, 153, 0);
 
 }
 
@@ -749,4 +858,113 @@ background: rgb(246,246,246);
   height: 270px;
 }
 
+
+/* monile verson */
+@media screen and (min-width: 420px) {
+.mobileHeadSec
+{
+  display: none;
+}
+}
+
+@media screen and (max-width: 420px) {
+  
+  .fontSection
+  {
+    display: none;
+  }
+ 
+.fontImg
+{
+  width: 100vw;
+  height: 90vh;
+
+  background-image: url("../../../assets/web Img/img1.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:top;
+}
+
+.mtexatandbtn
+{
+  width: 100vw;
+  height: 90vh;
+  padding: 20% 5%;
+  position: absolute;
+  top: 70px;
+  background: rgba(0, 0, 0, 0.658);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mtexatandbtn h1
+{
+color: #e7e7e7; 
+font-size: 40px;
+font-family: "Heebo", sans-serif;
+
+}
+.mtexatandbtn h2
+{
+  color: #ec4016; 
+font-size: 32px;
+font-family: "Heebo", sans-serif;
+}
+.mtexatandbtn button 
+{
+   padding: 8px 5px;
+  border: none;
+  outline: none;
+  width: 40%;
+  color: white;
+    font-family: "Heebo", sans-serif;
+ background: #111637;
+  border-radius: 3px;
+  margin: 20px 5px;
+  font-size: 18px;
+  cursor: pointer; 
+}
+
+.whyGmat h1,.gamtFormat h1,.whtgmatTutor h1,.privateTutor h1,.textSectin2 h1,.studentAttend h1,.text1S h1,.testimonial h1
+{
+ 
+  font-size: 28px;
+  
+}
+.gamtFormat p 
+{
+columns: 100px 1;
+}
+.privateTutor
+{
+width: 95%;
+}
+.textSectin2
+{
+  padding: 10px 25px;
+}
+#slider
+{
+  display: none;
+}
+
+
+.testimontalcontent
+{
+  width: 95%;
+  margin: auto;
+ -webkit-box-shadow: 1px 1px 15px 0px rgba(50, 50, 50, 0.26);
+-moz-box-shadow:    1px 1px 15px 0px rgba(50, 50, 50, 0.26);
+box-shadow:         1px 1px 15px 0px rgba(50, 50, 50, 0.26);
+background: rgb(246,246,246);
+}
+
+
+
+
+
+
+
+  }
 </style>

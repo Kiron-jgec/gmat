@@ -20,7 +20,7 @@
         </p>
       </div>
       <div class="imgSec">
-        <img src="../../../assets/web Img/7-600x600-1.jpg" alt="" />
+        <img src="../../../assets/web Img/students.webp" alt="" />
       </div>
     </div>
 
@@ -196,17 +196,17 @@ section
 }
 .Acceptance
 {
-    background: #111637;
+    background: #f1f3ff;
 }
 .Acceptance h2 
 {
-   color: #e24203;  
+     color: #045fcf;
 }
 .Acceptance p 
 {
  columns: 50px 3;  
   text-align: left;   
-  color: rgb(183, 197, 209);
+  
 }
 
 .theDatabase
@@ -228,14 +228,60 @@ border: 1px rgb(218, 218, 218) solid;
 
 .inpVson
 {
-    background: #045fcf;
+    background: #f1f3ff;
     padding: 1px 4% 25px 4%;
 }
 
 .inpVson p
 {
     text-align: left;
-    color: rgb(233, 233, 233);
+   
 
 }
+
+
+
+
+
+
+
+
+
+/* mobile versoin  */
+
+
+@media screen and (max-width: 420px) {
+
+.inperson h1 
+{
+
+  font-size: 30px;
+  margin: auto;
+  padding: 0px 4%;
+}
+.imgSec 
+{
+  text-align: center;
+}
+.imgSec img 
+{
+width: 100%;
+}
+.whyGmatPrep p,.Acceptance p,.whyBeating p  
+{
+columns: 50px 1;  
+padding: 0px 4%;
+text-align: left;
+}
+.whyBeating
+{
+  text-align: center;
+}
+.theDatabase
+{
+  width: 95%;
+}
+
+}
+
 </style>

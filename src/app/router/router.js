@@ -23,6 +23,61 @@ const home= resolve => {
       resolve(require("../compnents/pages/in_person.vue"));
     });
   };
+  //online 
+
+  const online= resolve => {
+    require.ensure(["../compnents/pages/online.vue"], () => {
+      resolve(require("../compnents/pages/online.vue"));
+    });
+  };
+  
+  // Materials
+
+  const materials = resolve => {
+    require.ensure(["../compnents/pages/materials.vue"], () => {
+      resolve(require("../compnents/pages/materials.vue"));
+    });
+  };
+
+  //videos
+
+
+  const videos = resolve => {
+    require.ensure(["../compnents/pages/videos.vue"], () => {
+      resolve(require("../compnents/pages/videos.vue"));
+    });
+  };
+
+
+    //reviews
+
+
+    const reviews = resolve => {
+      require.ensure(["../compnents/pages/reviews.vue"], () => {
+        resolve(require("../compnents/pages/reviews.vue"));
+      });
+    };
+// student img
+    const student_img = resolve => {
+      require.ensure(["../compnents/pages/student_img.vue"], () => {
+        resolve(require("../compnents/pages/student_img.vue"));
+      });
+    };
+
+
+
+    // student img
+    const contact = resolve => {
+      require.ensure(["../compnents/pages/contact.vue"], () => {
+        resolve(require("../compnents/pages/contact.vue"));
+      });
+    };
+  
+  
+  
+
+
+
 
 
 
@@ -82,6 +137,57 @@ const home= resolve => {
             name: "in_Person",
             
           },
+        //online
+
+        
+        {
+          path: "/online",
+          component:online,
+          name: "online",
+          
+        },
+
+        //materials 
+        {
+          path: "/materials",
+          component:materials,
+          name: "materials",
+          
+        },
+
+        
+        //videos 
+        {
+          path: "/videos",
+          component:videos,
+          name: "videos",
+          
+        },
+
+           //reviews
+           {
+            path: "/reviews",
+            component:reviews,
+            name: "reviews",
+            
+          },
+
+
+              //student_img
+              {
+                path: "/student_img",
+                component:student_img,
+                name: "student_img",
+                
+              },
+
+                  //contact
+                  {
+                    path: "/contact",
+                    component:contact,
+                    name: "contact",
+                    
+                  },
 
 
 

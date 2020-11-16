@@ -1,6 +1,6 @@
 <template>
   <div class="headerSec">
-    <a href="/"><img src="../../../assets/logo/gmat-new-logo.png" alt=""/></a>
+    <a href="/"><img src="../../../assets/logo/gmat-new-logo.webp" alt="" /></a>
 
     <header>
       <nav>
@@ -10,37 +10,103 @@
 
         <!-- dropdown section  -->
         <div class="dropdown">
-          <a class="dropbtn" @click="dropdownShowHide"
-            >TUTORING <i class="fa fa-angle-down" aria-hidden="true"></i
-          ></a>
+         
+          <span  @click="dropdownShowHide">TUTORING <i class="fa fa-angle-down" aria-hidden="true"></i
+          ></span>
 
           <div class="dropdown-content" v-if="dropDown">
             <div class="cloud">
-               <router-link :to="{ name: 'in_Person' }" active-class="active" exact>
-          <a>In-Person</a>
-        </router-link>
-              <a href="">Online</a>
+              <router-link
+                tag="a"
+                :to="{ name: 'in_Person' }"
+                active-class="active"
+                exact
+              >
+                In-Person
+              </router-link>
+              <router-link
+                tag="a"
+                :to="{ name: 'online' }"
+                active-class="active"
+                exact
+              >
+                Online
+              </router-link>
             </div>
           </div>
         </div>
 
-        <router-link :to="{ name: 'Home' }" active-class="active" exact>
-          <a>MATERIALS</a>
+        <router-link
+          tag="a"
+          :to="{ name: 'materials' }"
+          active-class="active"
+          exact
+        >
+          MATERIALS
         </router-link>
 
-        <router-link :to="{ name: 'projects' }" active-class="active" exact>
-          <a>TESTIMONIALS </a>
-        </router-link>
+        <!-- dropdown section  -->
+        <div class="dropdown">
+          <span @click="dropdownShowHide2"
+            >TESTIMONIALS <i class="fa fa-angle-down" aria-hidden="true"></i
+          ></span>
 
-        <router-link :to="{ name: 'contact' }" active-class="active" exact>
-          <a> ABOUT </a>
-        </router-link>
-        <router-link :to="{ name: 'contact' }" active-class="active" exact>
-          <a> CONTACT </a>
+          <div class="dropdown-content" v-if="dropDown2">
+            <div class="cloud">
+              <router-link
+                tag="a"
+                :to="{ name: 'videos' }"
+                active-class="active"
+                exact
+              >
+                Videos
+              </router-link>
+              <router-link
+                tag="a"
+                :to="{ name: 'reviews' }"
+                active-class="active"
+                exact
+              >
+                Reviews
+              </router-link>
+              <router-link
+                tag="a"
+                :to="{ name: 'student_img' }"
+                active-class="active"
+                exact
+              >
+                Student Gallery
+              </router-link>
+            </div>
+          </div>
+        </div>
+
+        <router-link
+          tag="a"
+          :to="{name: 'contact'}"
+          active-class="active"
+          exact
+        >
+          CONTACT
         </router-link>
       </nav>
     </header>
-       <button> <strong>212 393 4647</strong> </button>
+    <div class="contacSec">
+    <a href="tel:212 393 4647"> <button>
+        <i class="fa fa-phone phoneNo" aria-hidden="true"></i
+        ><strong> 212 393 4647</strong>
+      </button>
+      </a> 
+      <a href="https://wa.me/+12123934647">
+      <button>
+        <i class="fa fa-whatsapp whatsapp" aria-hidden="true"></i>
+      </button>
+      </a>
+      <a href="mailto:info@gmattutor.nyc">
+      <button>
+        <i class="fa fa-envelope emialSec" aria-hidden="true"></i>
+      </button></a>
+    </div>
   </div>
 </template>
 
@@ -48,14 +114,15 @@
 export default {
   data() {
     return {
-      dropDown: false
+      dropDown: false,
+      dropDown2:false
       // host name
     };
   },
   watch: {
     $route(to, from) {
       this.serviceName = to.params.serviceName;
-    }
+    },
   },
   methods: {
     dropdownShowHide() {
@@ -64,25 +131,31 @@ export default {
       } else {
         this.dropDown = false;
       }
-    }
-  }
+    },
+
+     dropdownShowHide2() {
+      if (this.dropDown2 == false) {
+        this.dropDown2 = true;
+      } else {
+        this.dropDown2 = false;
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;900&display=swap");
 
 .headerSec {
   position: fixed;
   width: 100%;
-  height: 90px;
+  height: 65px;
   padding: 2px 50px;
   display: flex;
-  z-index: 3;
+  z-index: 10;
   align-items: center;
-  background: #111637;
-  
- 
+  background: #ffffff;
+  justify-content: left;
 }
 .headerSec img {
   width: 200px;
@@ -92,35 +165,55 @@ nav {
   font-family: "Heebo", sans-serif;
 
   margin-left: 50px;
+  z-index: 5;
 }
-nav a {
-  color:#ffdc17;
-  margin: 0px 10px;
+nav a,nav  span {
+  color: #006fee;
+  margin: 0px 2px;
+ cursor: pointer;
+  padding: 8px 4px;
   font-size: 15px;
   text-decoration: bold;
+  z-index: 5;
+  font-weight: 600;
+ 
 }
 nav a:hover {
-  border-bottom: 2px #cf7404 solid;
+   border-bottom: 2px #b1b0b0 solid;
 }
-.headerSec button {
+
+
+.contacSec {
   position: absolute;
   right: 50px;
-  padding: 8px 30px;
+}
+.headerSec button {
+  padding: 8px 10px;
   font-family: "Heebo", sans-serif;
   outline: none;
   border: none;
   cursor: pointer;
-  background: red;
-  color: white;
+  background: #11163700;
+
   border-radius: 3px;
-}
-.headerSec button:hover {
- background: rgb(233, 2, 2);
+  font-size: 1.5vw;
 }
 
+.phoneNo {
+  font-size: 1.5vw;
+  color: #045fcf;
+}
+.whatsapp {
+  color: rgb(2, 197, 2);
+  font-size: 22px;
+}
+.emialSec {
+  color: black;
+  font-size: 20px;
+}
 /* dropdwn */
 .dropbtn {
-  color: #FFD700;
+  color: #173AFF;
   padding: 1px;
 
   border: none;
@@ -171,8 +264,7 @@ nav a:hover {
 } */
 
 .active {
-  color: red;
-  border-bottom: 2px #cf7404 solid;
+  border-bottom: 2px #b1b0b0 solid;
 }
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 </style>
