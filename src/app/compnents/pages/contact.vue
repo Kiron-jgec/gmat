@@ -42,6 +42,9 @@
          </div>
 
 
+
+
+
             <div class="bio">
          
          <div class="bioSec">
@@ -51,6 +54,11 @@
  <p>M.S., M.B.A., Ph.D., PfMP, PgMP, PMP</p>
          </div>
          </div>
+
+
+
+
+
 
 
          <div class="adderssSec">
@@ -92,14 +100,18 @@
 width: 100%;
 height: 100vh;
 padding: 0px 4%;
+
 }
 .bioSec
 {
 padding: 4%;
 
 width: fit-content;
+-moz-width:fit-content; 
 margin-left: 15%;
 text-align: center;
+position: absolute;
+z-index: -5;
 }
 
 .bioSec img 
@@ -122,10 +134,10 @@ text-align: center;
 
 .contactform
 {
-  position: fixed;
+  position: absolute;
    bottom: 50px;
   right:4%;
-  
+  z-index: -5;
   background: rgb(255, 255, 255);
   padding: 20px 20px 10px 20px;
   width: 32%;

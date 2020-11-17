@@ -35,11 +35,11 @@
 
 <!-- mobile landing Page -->
 
-<div class="mobileHeadSec">
+
 
 <div class="fontImg">
 
-</div>
+
 <div class="mtexatandbtn">
   <div class="mhContainer">
   <h1>TAKE THE FIRST STEP</h1>
@@ -62,9 +62,9 @@
         >
           <button class="Joinnow">Join Now</button>
         </router-link>
-</div>
-</div>
 
+</div>
+</div>
 
 </div>
 
@@ -314,12 +314,12 @@ I have some great news. I got accepted into Columbia. Thank you so much for all 
 </div>
 
 
-<div class="youtubevideos"  v-for="(testimoni,idx) in videosec" :key="idx">
+<!-- <div class="youtubevideos"  v-for="(testimoni,idx) in videosec" :key="idx">
 <iframe :src="testimoni" class="youtubeVideosI"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
-</div>
+</div> -->
 
 
 
@@ -401,10 +401,11 @@ testimonial:[
     role:"Student"
   },
 ],
-videosec:[
-  "https://www.youtube.com/embed/XavNjmMiiWQ","https://www.youtube.com/embed/lYt9hnLVc3M"
-,"https://www.youtube.com/embed/pCYCdMpdwlg"
-]
+// videosec:[
+//   "https://www.youtube.com/embed/XavNjmMiiWQ",
+//"https://www.youtube.com/embed/lYt9hnLVc3M"
+// ,"https://www.youtube.com/embed/pCYCdMpdwlg"
+// ]
 
     }
   }
@@ -861,7 +862,7 @@ background: rgb(246,246,246);
 
 /* monile verson */
 @media screen and (min-width: 420px) {
-.mobileHeadSec
+.fontImg
 {
   display: none;
 }
@@ -877,7 +878,7 @@ background: rgb(246,246,246);
 .fontImg
 {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 
   background-image: url("../../../assets/web Img/img1.webp");
   background-repeat: no-repeat;
@@ -888,9 +889,9 @@ background: rgb(246,246,246);
 .mtexatandbtn
 {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   padding: 20% 5%;
-  position: absolute;
+  
   top: 70px;
   background: rgba(0, 0, 0, 0.658);
   display: flex;
