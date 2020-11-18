@@ -9,12 +9,12 @@
         </router-link>
 
         <!-- dropdown section  -->
-        <div class="dropdown">
+        <div class="dropdown" @mouseover="dropDown=true" @mouseleave="dropDown=false">
          
-          <span  @click="dropdownShowHide">TUTORING <i class="fa fa-angle-down" aria-hidden="true"></i
+          <span  >TUTORING <i class="fa fa-angle-down" aria-hidden="true"></i
           ></span>
 
-          <div class="dropdown-content" v-if="dropDown">
+          <div class="dropdown-content" v-if="dropDown"  @mouseover="dropDown=true" >
             <div class="cloud">
               <router-link
                 tag="a"
@@ -46,12 +46,12 @@
         </router-link>
 
         <!-- dropdown section  -->
-        <div class="dropdown">
+        <div class="dropdown" @mouseover="dropDown2=true" @mouseleave="dropDown2=false">
           <span @click="dropdownShowHide2"
             >TESTIMONIALS <i class="fa fa-angle-down" aria-hidden="true"></i
           ></span>
 
-          <div class="dropdown-content" v-if="dropDown2">
+          <div class="dropdown-content" v-if="dropDown2" @mouseover="dropDown2=true">
             <div class="cloud">
               <router-link
                 tag="a"
@@ -126,11 +126,12 @@ export default {
   },
   methods: {
     dropdownShowHide() {
-      if (this.dropDown == false) {
-        this.dropDown = true;
-      } else {
-        this.dropDown = false;
-      }
+      // if (this.dropDown == false) {
+      //   this.dropDown = true;
+      // } else {
+      //   this.dropDown = false;
+      // }
+       this.dropDown = ! this.dropDown
     },
 
      dropdownShowHide2() {
@@ -229,11 +230,11 @@ nav a:hover {
   width: fit-content;
   position: absolute;
   left: 0;
-  top: 40px;
+  top: 30px;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 5;
   padding: 15px;
 
   display: grid;

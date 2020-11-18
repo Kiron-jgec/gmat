@@ -1,26 +1,44 @@
 <template>
     <div class="contact">
 
-    
+    <loader v-if="loader"></loader>
 
+
+<div class="successmsg" v-if="successMsg">
+  <div class="mmsgContaibner">
+   <h2>Message sent to Bob Successfully !</h2>
+   <button @click="hideSuccessMgs">Okay</button>
+  </div>
+     
+</div>
          <div class="contactform">
-         <h2>For Free Consultation</h2>
+         <h2>Get Free Consultation</h2>
            <div class="forminputs">
+
+
+        
+
+             <form  @submit.prevent="contactForm()" method="post">
              <label> 
-             <input type="text" placeholder="Name">
+             <input type="text" placeholder="Name"  name="Name" v-model="name" required>
               </label>
               <label>
 
-                  <input type="number" placeholder="Phone no">
+                  <input type="number" placeholder="Phone no" name="Phone_no" v-model="phone_No" required>
               </label>
               <label>
-             <input type="email" placeholder="Email">
+             <input type="email" placeholder="Email" name="Email" v-model="email" required>
               </label>
               <label>
               
-              <textarea name="" id="" placeholder="Massege" ></textarea>
+              <textarea  id="" placeholder="Massege" name="Massege" v-model="Massege" required></textarea>
               </label>
-              <button>Send</button>
+              <button type="submit">Send</button>
+              </form>
+
+
+
+
            </div>
            
             
@@ -88,6 +106,70 @@
     </div>
 </template>
 
+
+<script>
+import axios from "axios";
+import loader from "../additional_Pages/loader"
+export default {
+  data()
+  {
+    return{
+   name:null,
+   email:null,
+   phone_No:null,
+   Massege:null,
+//loader
+   loader:false,
+   // succes msg
+   successMsg:false
+    }
+  },
+ components: {
+    loader
+  },
+  methods:{
+     contactForm(){
+       this.loader=true;
+        const formData = new FormData();
+       
+       formData.append("Name",this.name);
+       formData.append("Email",this.email);
+       formData.append("Phone-No",this.phone_No);
+       formData.append("Massege",this.Massege);
+
+
+
+   axios
+          .post("https://formspree.io/f/mzbkvkzq", formData)
+          .then(res => {
+            this.loader=false;
+            console.log(res);
+            this.successMsg = true;
+           
+          })
+          .catch(err => {
+            this.loader=false;
+            this.loader = false;
+            this.errorMsg = true;
+
+            // setTimeout(function() {
+            //   this.errorMsg = false;
+            // }, 5000);
+            console.log(err.response);
+          });
+    
+    
+    
+    
+    },
+    hideSuccessMgs()
+    {
+   this.successMsg=false
+    }
+  }
+}
+</script>
+
 <style scoped>
 .contact
 {
@@ -101,17 +183,15 @@ width: 100%;
 height: 100vh;
 padding: 0px 4%;
 
+
 }
 .bioSec
 {
 padding: 4%;
-
 width: fit-content;
 -moz-width:fit-content; 
 margin-left: 15%;
 text-align: center;
-position: absolute;
-z-index: -5;
 }
 
 .bioSec img 
@@ -134,16 +214,16 @@ z-index: -5;
 
 .contactform
 {
-  position: absolute;
+  position: fixed;
    bottom: 50px;
   right:4%;
-  z-index: -5;
+  
   background: rgb(255, 255, 255);
   padding: 20px 20px 10px 20px;
   width: 32%;
   border-radius: 5px;
   border: 1px rgb(202, 202, 202) solid;
-
+ 
 }
 .contactform h2,.bioSec h2 
 {
@@ -298,6 +378,43 @@ margin: auto;
 height: fit-content;
 padding: 4%;
 }
+}
+
+
+
+.successmsg
+{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.637);
+ z-index: 10;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+.mmsgContaibner
+{
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+}
+.mmsgContaibner h2 
+{
+  color: #045fcf;
+}
+.mmsgContaibner button
+{
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background:  green;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 </style>

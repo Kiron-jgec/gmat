@@ -293,6 +293,30 @@ I have some great news. I got accepted into Columbia. Thank you so much for all 
 
 
 
+  <div class="videsContainer">
+  
+
+<div class="v1">
+  <video width="100%" height="350px"  controls>
+  <source src="../../../assets/videos/Audrey Constant.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+<div class="v2">
+  <video width="100%" height="350px"   controls>
+  <source src="../../../assets/videos/IMG 3735 1 Hanna Dempsey.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+
+</div>
+
+
+
 
 <div class="otherTestimot">
 
@@ -968,4 +992,36 @@ background: rgb(246,246,246);
 
 
   }
+
+.videsContainer
+{
+  padding: 5% 4%;
+ 
+ 
+
+
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 32rem));
+  grid-column-gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+}
+.v1,.v2
+{
+  background: rgb(29, 29, 29);
+  
+  border: 15px rgb(255, 255, 255) solid;
+
+  
+  border-radius: 10px;
+   -webkit-box-shadow: 1px 1px 15px 0px rgba(50, 50, 50, 0.26);
+-moz-box-shadow:    1px 1px 15px 0px rgba(50, 50, 50, 0.26);
+box-shadow:         1px 1px 15px 0px rgba(50, 50, 50, 0.26);
+}
+
+
+
+  
 </style>
