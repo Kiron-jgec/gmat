@@ -13,6 +13,15 @@
         <router-link tag="a" to="/" active-class="active" exact>
          HOME 
         </router-link>
+
+        <router-link
+          tag="a"
+          :to="{name: 'about'}"
+          active-class="active"
+          exact
+        >
+          ABOUT
+        </router-link>
         <span  @click="tutroeSec" >TUTORING&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>   </span>
         <div class="tutorSec" v-if="tutor">
         <!-- <router-link
@@ -112,14 +121,7 @@
         >
           CONTACT
         </router-link>
-         <router-link
-          tag="a"
-          :to="{name: 'about'}"
-          active-class="active"
-          exact
-        >
-          ABOUT
-        </router-link>
+         
 
 
         <router-link

@@ -8,6 +8,15 @@
           <a> HOME </a>
         </router-link>
 
+           <router-link
+          tag="a"
+          :to="{name: 'about'}"
+          active-class="active"
+          exact
+        >
+          ABOUT
+        </router-link>
+
         <!-- dropdown section  -->
         <div class="dropdown" @mouseover="dropDown=true" @mouseleave="dropDown=false">
          
@@ -120,14 +129,7 @@
         </router-link>
 
 
-        <router-link
-          tag="a"
-          :to="{name: 'about'}"
-          active-class="active"
-          exact
-        >
-          ABOUT
-        </router-link>
+     
 
 
         <router-link

@@ -69,7 +69,36 @@
 </div>
 
 
-
+<div class="chosePlan">
+  <h1>Choose Your Target GMAT Score Range</h1>
+  <div class="planContainer">
+    
+    <router-link
+                tag="a"
+                :to="{ name: 't500_600' }"
+                active-class="active"
+                exact
+              >
+                500-600
+              </router-link>
+              <router-link
+                tag="a"
+                :to="{ name: 't600_700' }"
+                active-class="active"
+                exact
+              >
+                600-700
+              </router-link>
+                <router-link
+                tag="a"
+                :to="{ name: 't700' }"
+                active-class="active"
+                exact
+              >
+                700+
+              </router-link>
+  </div>
+</div>
 
 
 
@@ -502,6 +531,41 @@ section
 
 
 
+.chosePlan
+{
+  
+  padding: 2% 4%;
+ width: 100%;
+ margin: auto;
+ text-align: center;
+ margin: 5% 0px;
+}
+.chosePlan a 
+{
+background: #0c1027;
+padding: 12px 10px;
+text-align: center;
+border-radius: 5px;
+color: white;
+border: 1px #0c1027 solid;
+   font-family: "Heebo", sans-serif;
+   font-size: 20px;
+}
+.chosePlan a:hover
+{
+  background: white;
+  color: #0c1027;
+}
+.planContainer
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+  grid-gap: 1rem;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px; 
+  justify-content: center;
+  
+}
 
 /* why gmat */
 
@@ -511,7 +575,8 @@ section
   width: 80%;
   margin: auto;
 }
-.whyGmat h1,.gamtFormat h1,.whtgmatTutor h1,.privateTutor h1,.textSectin2 h1,.studentAttend h1,.text1S h1,.testimonial h1
+.whyGmat h1,.gamtFormat h1,.whtgmatTutor h1,.privateTutor h1,.textSectin2 h1,.studentAttend h1,.text1S h1,.testimonial h1,.chosePlan h1
+
 {
   color: #045fcf;
    font-family: "Heebo", sans-serif;

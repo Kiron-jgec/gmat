@@ -9,7 +9,7 @@
           Ace your GMAT preparation with 10+ hours of video lessons, 10,000+
           GMAT like questions, and AI Driven tools.
         </p>
-     <a href="#">  <button>Get Free Resources</button></a> 
+     <a href="https://selfstudy.gmattutor.nyc/">  <button>Get Free Resources</button></a> 
       </div>
       <div class="Imgsec">
           <img src="../../../assets/web Img/matarial.webp" alt="">
@@ -38,7 +38,7 @@
           </div>
         </div>
 
-       <a href="#"> <button>Begin GMAT Preparation</button></a>
+       <a href="https://selfstudy.gmattutor.nyc/"> <button>Begin GMAT Preparation</button></a>
       </div>
     </section>
 
@@ -288,7 +288,7 @@
         <p>
           GMAT Quant & Verbal Sample Questions | Problem Solving, DS, SC & CR
         </p>
-        <button>Begin GMAT Preparation</button>
+      <a href="https://selfstudy.gmattutor.nyc/"> <button>Begin GMAT Preparation</button></a> 
       </div>
     </section>
   </div>
