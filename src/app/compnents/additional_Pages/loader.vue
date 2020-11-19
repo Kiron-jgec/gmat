@@ -13,6 +13,7 @@
     background: rgba(0, 0, 0, 0.575);
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 5;
     display: flex;
     align-content: center;

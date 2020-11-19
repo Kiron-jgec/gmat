@@ -15,7 +15,7 @@
         </router-link>
         <span  @click="tutroeSec" >TUTORING&nbsp;&nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>   </span>
         <div class="tutorSec" v-if="tutor">
-        <router-link
+        <!-- <router-link
           tag="a"
           :to="{ name: 'in_Person' }"
           active-class="active"
@@ -30,7 +30,35 @@
           exact
         >
           Online
-        </router-link>
+        </router-link> -->
+ 
+                <router-link
+                tag="a"
+                :to="{ name: 't500_600' }"
+                active-class="active"
+                exact
+              >
+                500-600
+              </router-link>
+              <router-link
+                tag="a"
+                :to="{ name: 't600_700' }"
+                active-class="active"
+                exact
+              >
+                600-700
+              </router-link>
+                <router-link
+                tag="a"
+                :to="{ name: 't700' }"
+                active-class="active"
+                exact
+              >
+                700+
+              </router-link>
+
+
+
 </div>
         <router-link
           tag="a"
@@ -83,6 +111,24 @@
           exact
         >
           CONTACT
+        </router-link>
+         <router-link
+          tag="a"
+          :to="{name: 'about'}"
+          active-class="active"
+          exact
+        >
+          ABOUT
+        </router-link>
+
+
+        <router-link
+          tag="a"
+          :to="{name: 'billing'}"
+          active-class="active"
+          exact
+        >
+          BILLING
         </router-link>
       </div>
       <a href="javascript:void(0);" class="icon" @click="myFunction">

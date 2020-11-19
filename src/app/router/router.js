@@ -18,18 +18,64 @@ const home= resolve => {
   };
 
   // in person
-  const in_Person= resolve => {
-    require.ensure(["../compnents/pages/in_person.vue"], () => {
-      resolve(require("../compnents/pages/in_person.vue"));
-    });
-  };
+
+  // const in_Person= resolve => {
+  //   require.ensure(["../compnents/pages/in_person.vue"], () => {
+  //     resolve(require("../compnents/pages/in_person.vue"));
+  //   });
+  // };
+
+  
   //online 
 
-  const online= resolve => {
-    require.ensure(["../compnents/pages/online.vue"], () => {
-      resolve(require("../compnents/pages/online.vue"));
+  // const online= resolve => {
+  //   require.ensure(["../compnents/pages/online.vue"], () => {
+  //     resolve(require("../compnents/pages/online.vue"));
+  //   });
+  // };
+
+
+
+
+  // Tutoring 
+  const t500_600= resolve => {
+    require.ensure(["../compnents/pages/t500-600.vue"], () => {
+      resolve(require("../compnents/pages/t500-600.vue"));
     });
   };
+
+  const t600_700= resolve => {
+    require.ensure(["../compnents/pages/t600-700.vue"], () => {
+      resolve(require("../compnents/pages/t600-700.vue"));
+    });
+  };
+
+  const t700= resolve => {
+    require.ensure(["../compnents/pages/t700.vue"], () => {
+      resolve(require("../compnents/pages/t700.vue"));
+    });
+  };
+
+
+
+  //about us 
+  
+  const about= resolve => {
+    require.ensure(["../compnents/pages/about_us.vue"], () => {
+      resolve(require("../compnents/pages/about_us.vue"));
+    });
+  };
+
+
+
+
+
+
+
+
+
+
+
   
   // Materials
 
@@ -49,6 +95,8 @@ const home= resolve => {
   };
 
 
+
+
     //reviews
 
 
@@ -57,6 +105,10 @@ const home= resolve => {
         resolve(require("../compnents/pages/reviews.vue"));
       });
     };
+
+
+
+
 // student img
     const student_img = resolve => {
       require.ensure(["../compnents/pages/student_img.vue"], () => {
@@ -73,6 +125,21 @@ const home= resolve => {
       });
     };
   
+      // Faq
+      const faq = resolve => {
+        require.ensure(["../compnents/pages/FaQ.vue"], () => {
+          resolve(require("../compnents/pages/FaQ.vue"));
+        });
+      };
+    
+
+       // billing
+       const billing = resolve => {
+        require.ensure(["../compnents/pages/billing.vue"], () => {
+          resolve(require("../compnents/pages/billing.vue"));
+        });
+      };
+    
   
   
 
@@ -131,21 +198,52 @@ const home= resolve => {
 
           //in person
 
-          {
-            path: "/In-Person",
-            component: in_Person,
-            name: "in_Person",
+          // {
+          //   path: "/In-Person",
+          //   component: in_Person,
+          //   name: "in_Person",
             
-          },
+          // },
         //online
 
         
-        {
-          path: "/online",
-          component:online,
-          name: "online",
+        // {
+        //   path: "/online",
+        //   component:online,
+        //   name: "online",
           
-        },
+        // },
+
+
+       // tutoring 500-600
+       {
+        path: "/tutoring_500-600",
+        component:t500_600,
+        name: "t500_600",
+        
+      },
+
+           // tutoring  600-700
+           {
+            path: "/tutoring_600-700",
+            component:t600_700,
+            name: "t600_700",
+            
+          },
+
+               // tutoring 700+
+               {
+                path: "/tutoring700+",
+                component:t700,
+                name: "t700",
+                
+              },
+    
+
+
+
+
+
 
         //materials 
         {
@@ -154,6 +252,27 @@ const home= resolve => {
           name: "materials",
           
         },
+
+
+
+        {
+          path: "/about",
+          component:about,
+          name: "about",
+          
+        },
+
+     
+
+     
+
+
+
+    
+
+
+
+
 
         
         //videos 
@@ -188,6 +307,23 @@ const home= resolve => {
                     name: "contact",
                     
                   },
+
+                    //faq
+                    {
+                      path: "/Faq",
+                      component:faq,
+                      name: "faq",
+                      
+                    },
+
+                     //billing
+                     {
+                      path: "/billing",
+                      component:billing,
+                      name: "billing",
+                      
+                    },
+
 
 
 

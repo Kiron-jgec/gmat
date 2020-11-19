@@ -16,7 +16,36 @@
 
           <div class="dropdown-content" v-if="dropDown"  @mouseover="dropDown=true" >
             <div class="cloud">
+              
+              
+              
+                <router-link
+                tag="a"
+                :to="{ name: 't500_600' }"
+                active-class="active"
+                exact
+              >
+                500-600
+              </router-link>
               <router-link
+                tag="a"
+                :to="{ name: 't600_700' }"
+                active-class="active"
+                exact
+              >
+                600-700
+              </router-link>
+                <router-link
+                tag="a"
+                :to="{ name: 't700' }"
+                active-class="active"
+                exact
+              >
+                700+
+              </router-link>
+              
+              
+              <!-- <router-link
                 tag="a"
                 :to="{ name: 'in_Person' }"
                 active-class="active"
@@ -31,7 +60,7 @@
                 exact
               >
                 Online
-              </router-link>
+              </router-link> -->
             </div>
           </div>
         </div>
@@ -88,6 +117,26 @@
           exact
         >
           CONTACT
+        </router-link>
+
+
+        <router-link
+          tag="a"
+          :to="{name: 'about'}"
+          active-class="active"
+          exact
+        >
+          ABOUT
+        </router-link>
+
+
+        <router-link
+          tag="a"
+          :to="{name: 'billing'}"
+          active-class="active"
+          exact
+        >
+          BILLING
         </router-link>
       </nav>
     </header>

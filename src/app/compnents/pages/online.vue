@@ -116,7 +116,7 @@ We connect with our students either through Skype, Google Chat, or Zoom, where s
   margin-left: 15%;
 }
 .online h2 {
-color: #045fcf;
+  color: #045fcf;
   font-family: "Heebo", sans-serif;
   font-size: 30px;
   margin: 30px 0px;
