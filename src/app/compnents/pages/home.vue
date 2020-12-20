@@ -5,8 +5,8 @@
         <img src="../../../assets/web Img/img1.webp" alt="" />
       </div>
       <div class="textSectin">
-        <h1>TAKE THE FIRST STEP</h1>
-        <h2>OF YOUR JOURNY TO SUCCESS</h2>
+        <h1>GMAT TUTOR NYC :<br> IN-PERSON & ONLINE</h1>
+        <h2>Over 40 years of helping students achieve entry into MBA programs</h2>
         <div class="buttonSec">
          
             <router-link
@@ -489,22 +489,22 @@ section
   width: 100%;
 }
 .textSectin {
-  text-align: center;
+  text-align: left;
 }
 .textSectin h1 {
   color: #045fcf;
   font-family: "Heebo", sans-serif;
   font-size: 50px;
   margin: 10px 0px;
-  line-height: 30px;
+  line-height: 55px;
   font-weight: 550;
 }
 .textSectin h2 {
   font-family: "Heebo", sans-serif;
 
-  font-size: 2vw;
+  font-size: 30px;
   margin: 20px 0px;
-  color: rgb(145, 145, 145);
+  color: rgb(0, 0, 0);
   font-weight: 600;
 }
 .buttonSec {
